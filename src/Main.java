@@ -15,12 +15,10 @@ public class Main {
     }
 
     public static void addToMap(String key, Integer value) {
-        if (!map.containsKey(key)) {
-            map.put(key, value);
-        } else if (map.get(key).equals(value)) {
+        if (map.containsKey(key) && map.get(key).equals(value)){
             System.out.println("Такая пара КЛЮЧ-ЗНАЧЕНИЕ существует!");
         } else {
-            map.replace(key, value);
+            map.put(key, value);
         }
     }
 }
